@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=Neucha|Lato");
+$app-width: 500px;
+$app-height: 300px;
+$app-bg: #85c1e9;
+$accent-color: #79b0d4;
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#quote-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background: $app-bg;
+  width: $app-width;
+  height: $app-height;
+}
+.quote-tip {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  bottom: 2px;
+  left: 0%;
+  left: 15%;
+  background: transparent;
+  border-right: solid 64px $accent-color;
+  border-top: solid 64px transparent;
+  transform-origin: bottom left;
+  transform: rotate(45deg);
+  z-index: -1;
+  transition: filter 500ms ease;
+}
+
+@mixin bracket {
+  position: absolute;
+  background: $accent-color;
+  height: 3px;
+}
+@mixin pseudo-bracket {
+  content: "";
+  position: absolute;
+  background: $accent-color;
+  width: 3px;
+  height: 100px;
+}
+#top-bracket {
+  @include bracket;
+  top: -10px;
+  width: $app-width + 15px;
+}
+#top-bracket:before {
+  @include pseudo-bracket;
+  right: 100%;
+}
+#top-bracket:after {
+  @include pseudo-bracket;
+  left: 100%;
+}
+#bottom-bracket-right {
+  @include bracket;
+  bottom: -10px;
+  right: -10px;
+  width: 68%;
+}
+#bottom-bracket-right:before {
+  @include pseudo-bracket;
+  bottom: 0px;
+  right: 0px;
+}
+#bottom-bracket-left {
+  @include bracket;
+  bottom: -10px;
+  left: -10px;
+  width: 15%;
+}
+#bottom-bracket-left:before {
+  @include pseudo-bracket;
+  bottom: 0px;
+}
+
+#text {
+  font-family: "Neucha", sans-serif;
+  font-size: 1.8em;
+  width: 100%;
+  padding: 0.5em 0.5em 0 0.5em;
+  box-sizing: border-box;
+  max-height: 75%;
+  height: auto;
+}
+#author {
+  @extend #text;
+  font-size: 1.6em;
+  align-self: flex-end;
+  padding: 0 1.5em 0 0;
+  width: auto;
+}
+#action-bar {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
+
+#new-quote {
+  font-family: "Lato", sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 13%;
+  background: $accent-color;
+  height: 80px;
+  width: 100%;
+  border: none;
+  outline: none;
+  transition: filter 500ms ease;
+}
+// #new-quote:active{
+//   filter: brightness(95%);
+// }
+.hover-select {
+  filter: brightness(105%);
+}
+#tweet-quote {
+  height: 80px;
+  width: 80px;
+  background: #55acee;
+  filter: brightness(95%);
+  transition: filter 500ms ease;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+#tweet-quote:hover {
+  filter: brightness(101%);
+}

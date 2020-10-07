@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css?family=Neucha|Lato");
+body {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+#quote-box {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  position: relative;
+  background: #85c1e9;
+  width: 500px;
+  height: 300px;
+}
+
+.quote-tip {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  bottom: 2px;
+  left: 0%;
+  left: 15%;
+  background: transparent;
+  border-right: solid 64px #79b0d4;
+  border-top: solid 64px transparent;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: -1;
+  -webkit-transition: -webkit-filter 500ms ease;
+  transition: -webkit-filter 500ms ease;
+  transition: filter 500ms ease;
+  transition: filter 500ms ease, -webkit-filter 500ms ease;
+}
+
+#top-bracket {
+  position: absolute;
+  background: #79b0d4;
+  height: 3px;
+  top: -10px;
+  width: 515px;
+}
+
+#top-bracket:before {
+  content: "";
+  position: absolute;
+  background: #79b0d4;
+  width: 3px;
+  height: 100px;
+  right: 100%;
+}
+
+#top-bracket:after {
+  content: "";
+  position: absolute;
+  background: #79b0d4;
+  width: 3px;
+  height: 100px;
+  left: 100%;
+}
+
+#bottom-bracket-right {
+  position: absolute;
+  background: #79b0d4;
+  height: 3px;
+  bottom: -10px;
+  right: -10px;
+  width: 68%;
+}
+
+#bottom-bracket-right:before {
+  content: "";
+  position: absolute;
+  background: #79b0d4;
+  width: 3px;
+  height: 100px;
+  bottom: 0px;
+  right: 0px;
+}
+
+#bottom-bracket-left {
+  position: absolute;
+  background: #79b0d4;
+  height: 3px;
+  bottom: -10px;
+  left: -10px;
+  width: 15%;
+}
+
+#bottom-bracket-left:before {
+  content: "";
+  position: absolute;
+  background: #79b0d4;
+  width: 3px;
+  height: 100px;
+  bottom: 0px;
+}
+
+#text, #author {
+  font-family: "Neucha", sans-serif;
+  font-size: 1.8em;
+  width: 100%;
+  padding: 0.5em 0.5em 0 0.5em;
+  box-sizing: border-box;
+  max-height: 75%;
+  height: auto;
+}
+
+#author {
+  font-size: 1.6em;
+  align-self: flex-end;
+  padding: 0 1.5em 0 0;
+  width: auto;
+}
+
+#action-bar {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
+
+#new-quote {
+  font-family: "Lato", sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 13%;
+  background: #79b0d4;
+  height: 80px;
+  width: 100%;
+  border: none;
+  outline: none;
+  -webkit-transition: -webkit-filter 500ms ease;
+  transition: -webkit-filter 500ms ease;
+  transition: filter 500ms ease;
+  transition: filter 500ms ease, -webkit-filter 500ms ease;
+}
+
+.hover-select {
+  -webkit-filter: brightness(105%);
+          filter: brightness(105%);
+}
+
+#tweet-quote {
+  height: 80px;
+  width: 80px;
+  background: #55acee;
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
+  -webkit-transition: -webkit-filter 500ms ease;
+  transition: -webkit-filter 500ms ease;
+  transition: filter 500ms ease;
+  transition: filter 500ms ease, -webkit-filter 500ms ease;
+}
+#tweet-quote img {
+  width: 100%;
+  height: 100%;
+}
+
+#tweet-quote:hover {
+  -webkit-filter: brightness(101%);
+          filter: brightness(101%);
+}
